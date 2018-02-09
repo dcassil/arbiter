@@ -1,0 +1,30 @@
+{
+  "name": "arbiter-server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcassil/arbiter.git"
+  },
+  "devDependencies": {
+    "jest": "^22.2.2",
+    "nodemon": "^1.14.12"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/mpde_modules/"
+    ],
+    "modulePathIgnorePatterns": [
+      "/mpde_modules/"
+    ],
+    "verbose": true
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
