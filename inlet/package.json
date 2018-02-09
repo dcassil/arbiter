@@ -1,0 +1,35 @@
+{
+  "name": "arbiter-mock-server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "debug": "nodemon --inspect --ignore db/db.json index.js",
+    "test": "jest",
+    "start": "nodemon --ignore db/db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcassil/arbiter.git"
+  },
+  "devDependencies": {
+    "jest": "^22.2.2",
+    "nodemon": "^1.14.12"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/mpde_modules/",
+      "/__tests__/config.js"
+    ],
+    "modulePathIgnorePatterns": [
+      "/mpde_modules/"
+    ],
+    "verbose": true
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "lodash-id": "^0.14.0",
+    "lowdb": "^1.0.0"
+  }
+}

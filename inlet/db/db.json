@@ -1,0 +1,43 @@
+{
+	"test": {
+		"data": ["test1", "test2", "test3"]
+	},
+	"mock_items": {
+		"data": [
+			{
+				"Name": "Office Supplies",
+				"Description": "This is the sales description.",
+				"Active": true,
+				"FullyQualifiedName": "Office Supplies",
+				"Taxable": true,
+				"UnitPrice": 25,
+				"Type": "Inventory",
+				"IncomeAccountRef": {
+				  "value": "79",
+				  "name": "Sales of Product Income"
+				},
+				"PurchaseDesc": "This is the purchasing description.",
+				"PurchaseCost": 35,
+				"ExpenseAccountRef": {
+				  "value": "80",
+				  "name": "Cost of Goods Sold"
+				},
+				"AssetAccountRef": {
+				  "value": "81",
+				  "name": "Inventory Asset"
+				},
+				"TrackQtyOnHand": true,
+				"QtyOnHand": 10,
+				"InvStartDate": "2013-02-19",
+				"domain": "QBO",
+				"sparse": false,
+				"Id": "37",
+				"SyncToken": "0",
+				"MetaData": {
+				  "CreateTime": "2015-04-22T11:03:23-07:00",
+				  "LastUpdatedTime": "2015-04-22T11:03:24-07:00"
+				}
+			  }
+		]
+	}
+}
