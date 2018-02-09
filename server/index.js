@@ -19,7 +19,8 @@ let server = app.listen(process.env.PORT || DEFAULT_PORT, () => {
 	}
 
 	console.log('App listening at http://%s:%s', host, port);
-})
+});
+
 /**
  * Serve static file content and headers
  *
