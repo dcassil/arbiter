@@ -5,8 +5,9 @@
   "license": "ISC",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server -d --env.platform=default --progress --hot",
     "build": "NODE_ENV='production' webpack -p --progress --hot",
+    "dev": "webpack-dev-server -d --env.platform=default --progress --hot",
+    "lint": "eslint --debug src/; exit 0;",
     "test": "jest --config jest.config.json --updateSnapshot"
   },
   "keywords": [],
@@ -30,7 +31,7 @@
     "css-loader": "^0.28.4",
     "eslint": "^4.3.0",
     "eslint-loader": "^1.9.0",
-    "eslint-plugin-react": "^7.1.0",
+    "eslint-plugin-react": "^7.6.1",
     "extract-text-webpack-plugin": "^3.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.4",
