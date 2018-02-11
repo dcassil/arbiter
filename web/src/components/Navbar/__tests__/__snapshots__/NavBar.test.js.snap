@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar Component renders nav correctly renders nav elements correctly 1`] = `
+<div
+  className="column is-half is-offset-one-quarter"
+>
+  <nav
+    className="navbar "
+  >
+    <div
+      className="navbar-menu"
+      id="navMenuExample"
+    >
+      <div
+        className="navbar-start"
+      >
+        <a
+          aria-current="true"
+          className="navbar-item"
+          href="/"
+          onClick={[Function]}
+          style={Object {}}
+        />
+        <a
+          aria-current={false}
+          className="navbar-item topPadding"
+          href="/about"
+          onClick={[Function]}
+          style={undefined}
+        />
+      </div>
+    </div>
+  </nav>
+</div>
+`;
