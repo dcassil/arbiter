@@ -13,6 +13,12 @@ const router = () => express.Router(); // eslint-disable-line new-cap
 // Express Middleware
 app.use(bodyParser.json());
 
+app.use(function(req, res, next) {
+	res.header('Access-Control-Allow-Credentials', 'true');
+	res.header('Access-Control-Allow-Origin', 'http://localhost:8082');
+	next();
+});
+
 // Express config
 app.disable('x-powered-by');
 app.set('trust proxy', 1);
