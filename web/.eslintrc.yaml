@@ -100,6 +100,7 @@
     sourceType: "module"
   parser: "babel-eslint"
   globals:
+    app: true
     describe: true
     it: true
     define: true

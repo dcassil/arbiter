@@ -1,0 +1,14 @@
+{
+  "name": "arbiter",
+  "version": "0.0.1",
+  "scripts": {
+	"dev": "concurrently --kill-others \"npm run mock-inlet\" \"npm run mock-outlet\" \"npm run dev-server\" \"npm run web-server\"",
+	"mock-inlet": "npm --prefix inlet-mock run dev",
+	"mock-outlet": "npm --prefix outlet-mock run dev",
+	"dev-server": "npm --prefix server run dev",
+	"web-server": "npm --prefix web run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  }
+}

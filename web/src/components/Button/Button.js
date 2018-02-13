@@ -1,15 +1,15 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import 'bulma/css/bulma.css';
 
 export const Button = (props) => {
-	let throwAlert = () => alert('Copy and paste is a design error');
 	
 	return (
 		<div>
 			<div className="columns">
 				<div className="column is-half">
-					<a className="button is-danger" onClick={throwAlert}>{props.btnName}</a>
+					<NavLink className="button is-danger" to={props.url}>{props.title}</NavLink>
 				</div>
 			</div>
 		</div>
@@ -17,5 +17,6 @@ export const Button = (props) => {
 };
 
 Button.propTypes = {
-	btnName: PropTypes.string
+	title: PropTypes.string,
+	url: PropTypes.string
 };

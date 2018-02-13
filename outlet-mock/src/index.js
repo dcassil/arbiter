@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import 'bulma/css/bulma.css';
 import { Routes } from './Routes/Routes';
 
-const title = 'Minimilistic React-webpack-3-boilerplate [2017]';
+const title = 'Mock Outlet - Ecommerce Site';
 
 class App extends React.Component {
 	render() {
