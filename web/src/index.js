@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bulma/css/bulma.css';
-import { Routes } from './Routes/Routes';
+import { Routes } from 'Routes/Routes';
 
 const title = 'Arbiter App';
 

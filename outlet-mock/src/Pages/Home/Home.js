@@ -1,26 +1,18 @@
-import actions from '../../actions/*.js';
+import actions from 'actions/*.js';
 import React from 'react';
-import { NavBar } from '../../components/Navbar/NavBar';
+import { NavBar } from 'components/Navbar/NavBar';
+import store from 'foundations/store';
+
 // import ItemsGrid from '../../components/items/grid';
 
-export class Home extends React.Component {
-	componentWillMount() {
-		this.state = {};
-	}
+class Home extends React.PureComponent {
 	componentDidMount() {
-		actions.Items.getItems()
-			.then(resp => {
-				resp.json().then(items => {
-					console.log(items.data); // eslint-disable-line
-					this.setState({ items: items.data });
-				});
-			});
+		actions.Items.getItems();
 	}
 
 	render() {
-		let items = this.state.items || [];
-		// let itemsGrid = items ? <ItemsGrid { ...{ items } } /> : '';
-
+		let items = this.props.items || [];
+		
 		return (
 			<div>
 				<NavBar menu1={'Home'} menu2={'About'} />
@@ -37,3 +29,8 @@ export class Home extends React.Component {
 		);
 	}
 }
+
+export default store.subscribe(Home, {
+	items: 'items',
+});
+

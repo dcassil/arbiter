@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
 const config = {
 	entry: [
 		'webpack-dev-server/client?http://localhost:8082',
@@ -29,13 +30,17 @@ const config = {
 			use: ['babel-loader', 'eslint-loader']
 		}],
 	},
-	resolve: {
-		extensions: ['*', '.js', '.jsx', '.css'],
-	},
 	output: {
 		path: __dirname + '/dist', // eslint-disable-line no-path-concat
 		publicPath: '/',
 		filename: 'bundle.js'
+	},
+	resolve: {
+		extensions: ['*', '.js', '.jsx', '.css'],
+		modules: [
+			path.resolve('./src'),
+			path.resolve('./node_modules')
+		]
 	},
 	plugins: [
 		new webpack.DefinePlugin({

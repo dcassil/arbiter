@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button } from '../../components/Button/Button';
-import { NavBar } from '../../components/Navbar/NavBar';
+import { Button } from 'components/Button/Button';
+import { NavBar } from 'components/Navbar/NavBar';
 
 export class SourcesConnect extends React.Component {
 	render() {
