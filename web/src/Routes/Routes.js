@@ -1,25 +1,19 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { SourcesConnect } from '../Pages/Sources/Connect';
-import { Home } from '../Pages/Home/Home';
-import { Sources } from '../Pages/Sources/Sources';
-import { SourcesConnectForm } from '../Pages/Sources/Form';
+import router from 'libs/path-to-router';
+import actions from 'actions/*.js';
 
-export class Routes extends React.Component {
-	render() {
-		return (
-			<Router>
-				<Switch>
-					<Route exact path = '/' component = {Home} />>
-					<Route path = '/sources' component = {Sources} />
-					<Route path = '/sourcesConnect' component = {SourcesConnect} />
-					<Route path = '/sourcesConnectForm' component = {SourcesConnectForm} />
-					<Route render = { () => {
-						return <p>You're lost.  This is how new Router Switch is suppose to work!</p>;
-					}} />		
-				</Switch>
-			</Router>
+router.get('/', function() {
+	actions.screens.setSelected('main');
+});
 
-		);
-	}
-}
+router.get('/sources', function(route) {
+	actions.screens.setSelected('sources');
+	console.log(route); // eslint-disable-line
+});
+
+router.get('/source/:id', function(route) {
+	actions.screens.setSelected('source');
+	console.log(route.url); // eslint-disable-line
+	console.log(route.params.id); // eslint-disable-line
+});
+
+router.useHashbang();

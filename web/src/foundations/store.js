@@ -2,10 +2,8 @@ const toystore = require('toystore');
 const toystoreReact = require('toystore-react');
 
 let store = toystore.create({
-	foo: 'bar',
-	user: {
-		email: 'user@example.com',
-		id: 1,
+	screens: {
+		selected: 'main',
 	}
 });
 

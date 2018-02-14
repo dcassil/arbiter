@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bulma/css/bulma.css';
-import { Routes } from 'Routes/Routes';
+import routes from 'routes/routes'; // eslint-disable-line
+import Screens from 'screens/screens';
 
 const title = 'Arbiter App';
+
+// routes;
 
 class App extends React.Component {
 	render() {
@@ -12,7 +15,7 @@ class App extends React.Component {
 				<div className="column is-half is-offset-one-quarter">
 					<div className="title">{title}</div>
 				</div>
-				<Routes />
+				<Screens />
 			</div>
 		);
 	}
